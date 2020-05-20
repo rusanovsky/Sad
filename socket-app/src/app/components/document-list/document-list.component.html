@@ -1,0 +1,7 @@
+<div class='sidenav'>
+  <span (click)='newDoc()'>New Document</span>
+  <span [class.selected]='docId === currentDoc' (click)='loadDoc(docId)' *ngFor='let docId of documents | async'>{{ docId }}
+    <span class = "Action" (click)='deleteDoc(docId)'>Delete document</span>
+    <span class = "Action" (click)='saveDoc(docId,text)'>Save document</span>
+  </span>
+</div>
